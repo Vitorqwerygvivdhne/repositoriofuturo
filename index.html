@@ -1,75 +1,20 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escolha o Seu Destino</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 20px;
-            line-height: 1.6;
-        }
-        h1 {
-            color: #0056b3;
-            text-align: center;
-        }
-        p {
-            margin-bottom: 10px;
-        }
-        .instructions {
-            background-color: #e9e9e9;
-            border: 1px solid #ddd;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        .game-output {
-            background-color: #fff;
-            border: 1px solid #ccc;
-            padding: 15px;
-            border-radius: 8px;
-            min-height: 100px; /* Ensures there's space for output */
-            white-space: pre-wrap; /* Preserves line breaks in output */
-        }
-        button {
-            display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            font-size: 18px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Você decide o seu futuro!</title>
 </head>
 <body>
-    <h1>Escolha o Seu Destino</h1>
-
-    <div class="instructions">
-        <p>Bem-vindo à sua jornada de decisões. Cada escolha que você fizer moldará seu caminho!</p>
-        <p><strong>Instruções:</strong></p>
-        <ul>
-            <li>Clique no botão "Iniciar Jogo" abaixo.</li>
-            <li>As perguntas aparecerão em caixas de diálogo.</li>
-            <li>Digite **A** ou **B** (não importa se é maiúscula ou minúscula) para a sua escolha e pressione Enter ou clique em OK.</li>
-            <li>Após responder todas as perguntas, o **resumo do seu destino** será exibido **diretamente no console do seu navegador**. Para vê-lo, pressione `F12` (ou clique com o botão direito e escolha "Inspecionar", depois vá na aba "Console").</li>
-        </ul>
+    <div class="caixa-principal">
+        <h1>Você decide o seu futuro!</h1>
+        <div class="caixa-perguntas"></div>
+        <div class="caixa-alternativas"></div>
+        <div class="caixa-resultado">
+            <p class="texto-resultado"></p>
+        </div>
     </div>
-
-    <button onclick="escolhaSeuDestinoJS()">Iniciar Jogo</button>
-
-    <div class="game-output">
-        <p>O resultado do jogo aparecerá no console do navegador.</p>
-    </div>
-
     <script src="script.js"></script>
 </body>
 </html>
