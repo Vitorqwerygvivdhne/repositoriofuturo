@@ -1,43 +1,108 @@
-:root{
-    --cor-fundo: #12021d ;
-    --cor-principal: #180b20 ;
-    --cor-secundaria: #2e2133; 
-    --cor-destaque: #902bfd;
-    --cor-texto: #f8d7ff;
-
-}
-
 body {
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a2e; /* Um tom escuro para o fundo */
+    color: #e0e0e0; /* Cor de texto clara */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-}
-
-.caixa-principal{
-    background-color: var(--cor-principal);
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
+    min-height: 100vh; /* Ocupa a altura total da tela */
+    margin: 0;
     padding: 20px;
+    box-sizing: border-box; /* Inclui padding na largura/altura */
 }
 
-h1{
-    color: var(--cor-destaque);
+.caixa-principal {
+    background-color: #0f3460; /* Um azul mais escuro para a caixa principal */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+    border: 2px solid #533483; /* Borda roxa */
 }
 
-button {
-    background-color: var(--cor-secundaria);
-    color: var(--cor-texto);
+h1 {
+    color: #e94560; /* Vermelho vibrante para o título */
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.caixa-perguntas {
+    background-color: #2e4a86; /* Azul médio para as perguntas */
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    font-size: 1.4em;
+    font-weight: bold;
+    min-height: 80px; /* Garante um tamanho mínimo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.caixa-alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaço entre os botões */
+    margin-bottom: 30px;
+}
+
+.botao-alternativa {
+    background-color: #533483; /* Roxo para os botões */
+    color: #ffffff;
     border: none;
-    border-radius: 15px;
-    padding: 15px;
-    transition: background-color 0.3s;
+    border-radius: 8px;
+    padding: 15px 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-button:hover{
-    background-color: var(--cor-destaque);
-    color: var(--cor-principal);
+.botao-alternativa:hover {
+    background-color: #7a54a8; /* Roxo mais claro ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de "levantar" */
+}
+
+.botao-alternativa:active {
+    background-color: #432b6e; /* Roxo mais escuro ao clicar */
+    transform: translateY(0);
+}
+
+.caixa-resultado {
+    background-color: #16213e; /* Azul muito escuro para o resultado */
+    padding: 25px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    text-align: left;
+    white-space: pre-wrap; /* Preserva as quebras de linha no texto do resultado */
+    display: none; /* Escondido por padrão, só aparece no final */
+    max-height: 400px; /* Limita a altura para rolagem */
+    overflow-y: auto; /* Adiciona barra de rolagem se o conteúdo for muito longo */
+    border: 1px solid #e94560; /* Borda vermelha para destaque */
+}
+
+.texto-resultado {
+    line-height: 1.8;
+}
+
+/* Responsividade básica */
+@media (max-width: 600px) {
+    .caixa-principal {
+        padding: 25px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .caixa-perguntas {
+        font-size: 1.2em;
+        min-height: 100px;
+    }
+    .botao-alternativa {
+        font-size: 1em;
+        padding: 12px 20px;
+    }
 }
