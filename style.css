@@ -12,25 +12,25 @@ body {
 }
 
 .caixa-principal {
-    background-color: #0f3460; /* Um azul mais escuro para a caixa principal */
+    background-color: #0859bd; /* Um azul mais escuro para a caixa principal */
     border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 16px rgba(105, 4, 4, 0.808);
     padding: 40px;
     width: 90%;
     max-width: 700px;
     text-align: center;
-    border: 2px solid #533483; /* Borda roxa */
+    border: 2px solid #5c0421; /* Borda roxa */
 }
 
 h1 {
-    color: #e94560; /* Vermelho vibrante para o título */
+    color: #ee8a08; /* Vermelho vibrante para o título */
     margin-bottom: 30px;
     font-size: 2.5em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 
 .caixa-perguntas {
-    background-color: #2e4a86; /* Azul médio para as perguntas */
+    background-color: #0b7a36; /* Azul médio para as perguntas */
     padding: 25px;
     border-radius: 10px;
     margin-bottom: 30px;
@@ -52,7 +52,7 @@ h1 {
 
 .botao-alternativa {
     background-color: #533483; /* Roxo para os botões */
-    color: #ffffff;
+    color: rgb(255, 131, 131);
     border: none;
     border-radius: 8px;
     padding: 15px 25px;
